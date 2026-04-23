@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # MySQL 설정
+  mysql:
+    image: mysql:8.0
+    container_name: ticketguard-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 6891  # yml 파일과 비밀번호 일치
+      MYSQL_DATABASE: ticketguard        # 시작 시 자동으로 생성할 DB 이름
+      TZ: Asia/Seoul
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+
+  # Redis 설정
+  redis:
+    image: redis:alpine
+    container_name: ticketguard-redis
+    ports:
+      - "6379:6379"
