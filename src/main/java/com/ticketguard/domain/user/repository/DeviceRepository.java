@@ -13,4 +13,6 @@ public interface DeviceRepository extends JpaRepository<Device, UUID> {
 
     // 기기 지문으로 찾기
     Optional<Device> findByDeviceFingerprint(String deviceFingerprint);
+
+    Optional<Device> findByUserId(UUID userId);
 }
