@@ -1,6 +1,6 @@
 package com.ticketguard.domain.ticket.entity;
 
-import com.ticketguard.domain.concert.entity.Event;
+import com.ticketguard.domain.event.entity.Event;
 import com.ticketguard.domain.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
