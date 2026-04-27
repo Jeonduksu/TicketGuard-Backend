@@ -1,4 +1,4 @@
-package com.ticketguard.domain.concert.entity;
+package com.ticketguard.domain.event.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -37,6 +37,6 @@ public class Event {
     private EventStatus status;
 
     public enum EventStatus {
-        DREAFT,PUBLISHED,CLOSED
+        DRAFT,PUBLISHED,CLOSED
     }
 }
