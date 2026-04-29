@@ -47,4 +47,9 @@ public class Ticket {
     public enum TicketStatus {
         ISSUED,USED,EXPIRED,REVOKED
     }
+
+    public void useTicket() {
+        this.status = TicketStatus.USED;
+        this.usedAt = LocalDateTime.now();
+    }
 }

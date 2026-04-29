@@ -20,6 +20,7 @@ public class GlobalExceptionHandler {
     // 403 : 권한 없음/기기 불일치
     @ExceptionHandler(IllegalStateException.class)
     public ResponseEntity<ApiResponse<Void>> handleForbidden(IllegalStateException e) {
+        e.printStackTrace();
         return ResponseEntity.status(HttpStatus.FORBIDDEN)
                 .body(ApiResponse.error(new ErrorResponse("FORBIDDEN", e.getMessage())));
     }
