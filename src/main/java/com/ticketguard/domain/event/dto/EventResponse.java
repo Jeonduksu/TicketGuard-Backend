@@ -10,7 +10,10 @@ public record EventResponse(
         String title,
         LocalDateTime startAt,
         String venue,
-        int totalSeas
+        int totalSeas,
+        String imageUrl,
+        String category,
+        int price
 ) {
 
     public static EventResponse from(Event event) {
@@ -19,7 +22,10 @@ public record EventResponse(
                 event.getTitle(),
                 event.getStartsAt(),
                 event.getVenue(),
-                event.getTotalSeats()
+                event.getTotalSeats(),
+                event.getImageUrl(),
+                event.getCategory().name(),
+                event.getPrice()
         );
     }
 }

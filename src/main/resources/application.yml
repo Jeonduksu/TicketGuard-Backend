@@ -21,3 +21,7 @@ spring:
 jwt:
   secret: your-very-long-secret-key-at-least-32-characters-long-12345
   expiration: 3600000 # 1시간 (밀리초)
+
+culture:
+  api:
+    key: 4aea463733e9d7309b2110c0f382cda98ec057337978db50b99ddaf2da0fb64a

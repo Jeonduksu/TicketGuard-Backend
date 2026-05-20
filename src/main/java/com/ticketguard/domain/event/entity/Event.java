@@ -36,7 +36,22 @@ public class Event {
     @Column(nullable = false)
     private EventStatus status;
 
+    @Column
+    private String imageUrl;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private EventCategory category;
+
+    @Column(nullable = false)
+    private Integer price;
+
     public enum EventStatus {
         DRAFT,PUBLISHED,CLOSED
     }
+
+    public enum EventCategory {
+        CONCERT,MUSICAL,SPORTS,EXHIBITION,CLASSIC,ETC,THEATER,FAMILY,FESTIVAL
+    }
+
 }
